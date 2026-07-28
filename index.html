@@ -255,45 +255,16 @@
     }
 
     /* -- About ------------------------------------------------------- */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 72px;
-      align-items: start;
+    .about-prose {
+      max-width: 760px;
     }
-    .about-bio p {
-      font-size: 15px;
+    .about-prose p {
+      font-size: 16px;
       color: var(--slate);
-      line-height: 1.85;
-      margin-bottom: 18px;
+      line-height: 1.9;
+      margin-bottom: 22px;
     }
-    .about-bio p:last-child { margin-bottom: 0; }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .stat-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px 18px;
-    }
-    .stat-label {
-      display: block;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 7px;
-    }
-    .stat-value {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--navy);
-      line-height: 1.4;
-    }
+    .about-prose p:last-child { margin-bottom: 0; }
 
     /* -- Skills ------------------------------------------------------ */
     .skills-grid {
@@ -441,6 +412,13 @@
       margin-bottom: 0;
       padding-bottom: 0;
     }
+    /* Last edu item before the exemptions block: drop its divider so the
+       exemptions' own top border is the only rule between them */
+    .edu-item:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
     .edu-period {
       font-size: 12px;
       font-weight: 500;
@@ -469,7 +447,7 @@
 
     /* -- Exemptions block -------------------------------------------- */
     .exemptions {
-      margin-top: 52px;
+      margin-top: 44px;
       padding-top: 44px;
       border-top: 1px solid var(--border);
     }
@@ -605,7 +583,6 @@
       .section { padding: 72px 24px; }
       #hero { padding: 108px 24px 72px; }
 
-      .about-grid { grid-template-columns: 1fr; gap: 44px; }
       .skills-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
       .edu-item { grid-template-columns: 1fr; gap: 6px; }
@@ -660,36 +637,16 @@
       <span class="eyebrow">Background</span>
       <h2 class="section-title">About Me</h2>
       <div class="title-rule"></div>
-      <div class="about-grid reveal">
-        <div class="about-bio">
-          <p>
-            I am in my final year of BScHons Actuarial Science at Wits with eight ASSA exemptions. Actuarial science pulled me in because the problems are real: the maths underpins decisions about whether people can retire comfortably, access healthcare, or protect their families. That is the kind of work I want to be doing.
-          </p>
-          <p>
-            Outside of coursework I tutor over 120 second-year students across financial mathematics, business applications, and life contingencies. It has turned out to be one of the most rewarding parts of my week. Explaining an idea until it genuinely clicks for someone is a different skill from being able to derive it yourself, and doing it every week has made me a clearer thinker and a better communicator. 
-          </p>
-          <p>
-            I am genuinely excited about what AI tools can do for actuaries, and I do not think the profession should be threatened by them. Used well, AI extends what one person can do and frees up time for the kind of judgement that models cannot replicate. I aspire to be an actuary who utilises these tools properly, effectively and efficiently.
-          </p>
-        </div>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <span class="stat-label">Degree</span>
-            <span class="stat-value">BScHons Actuarial Science</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-label">ASSA Exemptions</span>
-            <span class="stat-value">8 Exemptions</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-label">Institution</span>
-            <span class="stat-value">University of the Witwatersrand</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-label">Focus Areas</span>
-            <span class="stat-value">Life &middot; Health &middot; Pensions</span>
-          </div>
-        </div>
+      <div class="about-prose reveal">
+        <p>
+          I am in my final year of BScHons Actuarial Science at Wits, with eight ASSA exemptions behind me and my sights set on qualifying as a Fellow. What drew me to actuarial science is that the problems are real: the maths sits underneath decisions about whether people can retire comfortably, access healthcare, or protect the businesses they have spent years building. That is the kind of work I want to spend my career on.
+        </p>
+        <p>
+          Outside of coursework I tutor over 120 second-year students across financial mathematics, business applications, and life contingencies. It has turned out to be one of the most rewarding parts of my week. Explaining an idea until it genuinely clicks for someone is a different skill from being able to derive it yourself, and doing it every week has made me a clearer thinker and a better communicator.
+        </p>
+        <p>
+          I am genuinely excited about what AI tools can do for actuaries, and I do not think the profession should be threatened by them. Used well, AI extends what one person can do and frees up time for the kind of judgement that models cannot replicate. I aspire to be an actuary who utilises these tools properly, effectively and efficiently.
+        </p>
       </div>
     </div>
   </section>
@@ -817,6 +774,7 @@
         <div>
           <div class="edu-degree">BSc Actuarial Science &amp; Mathematical Statistics</div>
           <div class="edu-institution">University of the Witwatersrand, Johannesburg</div>
+        </div>
       </div>
 
       <div class="exemptions reveal">
