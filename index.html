@@ -697,27 +697,28 @@
       <div class="title-rule"></div>
       <div class="projects-grid">
 
-        <div class="project-card reveal">
-          <span class="project-type">Honours Research Project &middot; 2026</span>
-          <h3 class="project-title">Mortality Forecasting: RNNs vs Lee-Carter</h3>
-          <p class="project-desc">
-            Constructed and evaluated Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) recurrent neural network architectures for long-horizon mortality forecasting, benchmarked against the Lee-Carter model on a 10-year test set. England and Wales data formed the primary dataset, with Japanese female mortality data sourced from the Human Mortality Database (HMD) providing a key exception case in the analysis.
-          </p>
-          <span class="findings-label">Key Findings</span>
-          <ul class="findings-list">
-            <li>Lee-Carter substantially outperformed both RNN architectures overall</li>
-            <li>RNNs failed to capture mortality improvement trends over the long horizon</li>
-            <li>LSTM outperformed Lee-Carter for Japanese female mortality (Human Mortality Database)</li>
-            <li>GRU generally outperformed LSTM despite having fewer parameters</li>
-          </ul>
-          <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">LSTM &middot; GRU</span>
-            <span class="tag">Lee-Carter</span>
-            <span class="tag">Mortality Modelling</span>
-            <span class="tag">HMD</span>
-          </div>
-        </div>
+       <div class="project-card reveal">
+  <span class="project-type">Honours Research Project &middot; 2026</span>
+  <h3 class="project-title">Mortality Forecasting: RNNs vs Lee-Carter</h3>
+  <p class="project-desc">
+    Benchmarked Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) networks against Lee-Carter and a naive random walk with drift for long-horizon mortality forecasting, using Human Mortality Database data for England &amp; Wales (1950&ndash;2019) with Japan as a robustness check. Each model's projections were then translated into the liability of a synthetic defined benefit pension scheme.
+  </p>
+  <span class="findings-label">Key Findings</span>
+  <ul class="findings-list">
+    <li>LSTM and GRU outperformed Lee-Carter on RMSE and MAE in every sex and age-group panel, with the widest gap at pension ages</li>
+    <li>A naive random walk with drift matched or beat both RNNs, so the gain comes from relaxing Lee-Carter's single time index, not from deep learning</li>
+    <li>Training the RNNs on year-on-year changes in log mortality rather than levels removed flat, mean-reverting projections and reversed the initial results</li>
+    <li>Model choice moved the pension liability by under 1%, while assuming any mortality improvement at all moved it by about 4%</li>
+  </ul>
+  <div class="project-tags">
+    <span class="tag">Python</span>
+    <span class="tag">LSTM &middot; GRU</span>
+    <span class="tag">Lee-Carter</span>
+    <span class="tag">Mortality Modelling</span>
+    <span class="tag">DB Pension Valuation</span>
+    <span class="tag">HMD</span>
+  </div>
+</div>
 
         <div class="project-card reveal">
           <span class="project-type">Personal Project &middot; Financial Modelling</span>
